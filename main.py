@@ -12,8 +12,8 @@ from hyper_parameters import model_to_params
 
 
 def prepare_data():
-    # data = pd.read_csv("tcyb-yerima-2777960-mm/drebin-215-dataset-5560malware-9476-benign.csv")
-    data = pd.read_csv("tcyb-yerima-2777960-mm/malgenome-215-dataset-1260malware-2539-benign.csv")
+    data = pd.read_csv("tcyb-yerima-2777960-mm/drebin-215-dataset-5560malware-9476-benign.csv")
+    #ata = pd.read_csv("tcyb-yerima-2777960-mm/malgenome-215-dataset-1260malware-2539-benign.csv")
 
     # shuffle
     data = data.sample(frac=1)

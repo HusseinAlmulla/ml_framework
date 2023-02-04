@@ -1,11 +1,13 @@
-from scipy.spatial.distance import mahalanobis, euclidean
+import manhattan as manhattan
+from scipy.spatial.distance import minkowski
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 from enn.enn import ENN
-from sklearn.datasets import make_classification
+
+from distance_function import HasD, LD
 
 model_to_params = {
     LogisticRegression: {
@@ -18,7 +20,13 @@ model_to_params = {
     },
     GaussianNB: {},
 
-    # https://github.com/timo-stoettner/ENN
+    https://github.com/HusseinAlmulla/ENN
     ENN: {
-    }
+        "k": [1, 3, 5]
+    },
+    KNeighborsClassifier: {
+        "n_neighbors": [3],
+        "metric": ['dice', HasD, 'rogerstanimoto']
+    },
+
 }
