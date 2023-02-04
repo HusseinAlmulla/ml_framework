@@ -20,7 +20,7 @@ model_to_params = {
     },
     GaussianNB: {},
 
-    https://github.com/HusseinAlmulla/ENN
+    # https://github.com/HusseinAlmulla/ENN
     ENN: {
         "k": [1, 3, 5]
     },
